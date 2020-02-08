@@ -10,6 +10,9 @@ const menu = [{ name: 'A', linkpath: '/L1' }, { name: 'B', linkpath: '/L2' }]
 const card = { image: image, e_index:5,price:120,aboutus:"This product is something"}
 function App() {
   return (
+    <>
+    <Navbar />
+    <main>
     <div className="cardlist">
       <Card card={card} />
       <Card card={card} />
@@ -25,6 +28,8 @@ function App() {
       <Card card={card} />
       <Card card={card} />
     </div>
+    </main>
+    </>
   );
 }
 
