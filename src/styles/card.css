@@ -1,0 +1,82 @@
+.cardlist{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    border-radius: 20px;
+    box-shadow: -3px -3px 10px 5px rgb(240, 253, 247),3px 3px 15px 5px rgb(185, 184, 184) ;
+    margin: 20px;
+    background-color: #ffffff;
+}
+.card-img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-width: 250px;
+    max-height: 250px;
+}
+.card-title{
+    font-size: 125%;
+    color:#323232;
+    padding:0;
+    margin:0;
+    text-align: center;
+}
+.card-content{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.e-friendly{
+    text-align: center;
+    padding-right: 1em;
+    display: inline-block;
+    font-size: 130%;
+    font-weight: 600;
+}
+.e-friendly .label{
+    text-align: center;
+    font-size: 40%;
+    color:rgb(66, 66, 66);
+}
+.green{
+background-color:hsl(120, 97%, 67%);
+}
+.blue{
+    background-color:hsl(234, 96%, 67%);
+}
+.red{
+    background-color:hsl(0, 97%, 67%);
+}
+.price{
+    display: inline-block;
+    color:#323232;
+    padding-left: 2rem;
+}
+.price span{
+    font-size: 150%;
+}
+.leaf-icon{
+    color:hsl(120, 97%, 67%);
+}
+.number{
+    display: inline-flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    min-width:2rem;
+    min-height: 2rem;
+    border-radius: 50%;
+}

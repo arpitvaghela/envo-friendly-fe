@@ -1,0 +1,23 @@
+.sidebar{
+    position: fixed;
+
+    height: 100vw;
+    width:20vw;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sidebar .link-menu-items{
+    text-decoration:none;
+    color:inherit;
+
+    cursor: pointer;
+    padding-top: 1em;
+
+}
+
+.sidebar .bar-icon{
+    padding: 20px;
+}

@@ -1,0 +1,34 @@
+.navbar{
+    width:100vw;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left:0;
+    color:#9841DB;
+    background-color: whitesmoke;
+    z-index: 100;
+}
+.navbar *{
+    display: inline-block;
+}
+.user-icon{
+    font-size: 170%;
+    justify-self: center;
+    padding: 5px;
+    margin-right: 2em;
+}
+.navbar .App-logo{
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+    font-family: 'Kristi', cursive;
+    font-size: 270%;
+    margin-left: 30px;
+}
+
+a.shopping-cart-icon{
+    align-self: center;
+}
