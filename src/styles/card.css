@@ -1,5 +1,6 @@
 .cardlist{
-    margin-top: 10vh;
+  padding-top: 10vh;
+    width:80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +16,8 @@
     
     border-radius: 20px;
     box-shadow: -3px -3px 10px 5px rgb(240, 253, 247),3px 3px 15px 5px rgb(185, 184, 184) ;
-    margin: 20px;
+    margin: 40px;
+    margin-bottom: 60px;
     background-color: #ffffff;
 }
 .card-img{
@@ -51,7 +53,7 @@
     color:rgb(66, 66, 66);
 }
 .green{
-background-color:hsl(120, 97%, 67%);
+background-color:#05AA0A;
 }
 .blue{
     background-color:hsl(234, 96%, 67%);

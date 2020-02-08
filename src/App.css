@@ -3,3 +3,8 @@
 body{
   background-color: #eeeeee;
 }
+
+main{
+  display: flex;
+  flex-direction: row;
+}

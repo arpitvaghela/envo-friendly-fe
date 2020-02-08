@@ -11,7 +11,7 @@ class Sidebar extends React.Component{
             <div className="sidebar" >
             {
                 this.props.menu.map((menu_item,index) => (
-                        <Link key={index} to={menu_item.linkpath} className="link-menu-items">{menu_item.name}</Link> 
+                        <a key={index} to={menu_item.linkpath} className="link-menu-items">{menu_item.name}</a> 
                 ))
             }
         </div>)
