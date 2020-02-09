@@ -1,13 +1,14 @@
+
 import React from 'react'
 import Card from './card'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
-class Cardlist extends React.Component {
+class Listall extends React.Component {
     render() {
-        let CAT_QUERY = gql`
+        let ALL_QUERY = gql`
         {
-            products(search:"${this.props.category}",searchtype:"category"){
+            products{
               productId,
               productName,
               productPrice,
@@ -18,16 +19,15 @@ class Cardlist extends React.Component {
               envScore
             }
           }`;
-        return (<Query query={CAT_QUERY}>
+        return (<Query query={ALL_QUERY}>
             {({ loading, error, data }) => {
                 if (loading) return <div>Fetching</div>
                 if (error) return <div>Error</div>
 
                 const products = data.products
-
                 return (
                     <div className="cardlist">
-                        {products.map(product => <Card product={product} />)}
+                        {products.map(product => <Card key={product.productId} product={product} />)}
                     </div>
                 )
             }}
@@ -36,4 +36,4 @@ class Cardlist extends React.Component {
     }
 }
 
-export default Cardlist;
+export default Listall;

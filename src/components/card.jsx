@@ -18,10 +18,10 @@ class Card extends React.Component {
     render() {
         let color = 'black';
 
-        if (this.props.card.e_index < 5) {
+        if (this.props.product.envScore < 5) {
             color = 'red';
         }
-        else if (this.props.card.e_index < 8 && this.props.card.e_index >= 5) {
+        else if (this.props.product.envScore < 8 && this.props.product.envScore >= 5) {
             color = 'blue';
         } else {
             color = 'green';
@@ -29,17 +29,17 @@ class Card extends React.Component {
         return (
             <>
             {
-                this.state.showpopup?<Popup card={this.props.card} click={this.toogleShowpopup.bind(this)} color={color}/>:null
+                this.state.showpopup?<Popup product={this.props.product} click={this.toogleShowpopup.bind(this)} color={color}/>:null
             }
             <div className="card" onClick={() => {this.toogleShowpopup() }}>
-                <img src={this.props.card.image} alt={this.props.card.name} className="card-img" />
-                <h3 className="card-title">{this.props.card.name}</h3>
+                <img src={this.props.product.imageUrl} alt={this.props.product.productName} className="card-img" />
+                <span className="card-title">{this.props.product.productName}</span>
                 <div className="card-content">
                     <div className="price">
-                        &#8377;<span>{this.props.card.price}</span>
+                        &#8377;<span>{this.props.product.productPrice}</span>
                     </div>
                     <div className="e-friendly ">
-                        <span className={"number " + color}>{this.props.card.e_index}</span>
+                        <span className={"number " + color}>{Math.floor(this.props.product.envScore)}</span>
                         <div className="label">
                             <FaLeaf className="leaf-icon" />
                             eco-friendly index

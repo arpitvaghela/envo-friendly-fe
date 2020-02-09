@@ -1,13 +1,14 @@
 import React from 'react'
 import Card from './card'
 import { Query } from 'react-apollo'
+import { withRouter } from 'react-router'
 import gql from 'graphql-tag'
 
-class Cardlist extends React.Component {
+class SearchResult extends React.Component {
     render() {
-        let CAT_QUERY = gql`
+        let SEARCH_QUERY = gql`
         {
-            products(search:"${this.props.category}",searchtype:"category"){
+            products(search:"${this.props.query}"){
               productId,
               productName,
               productPrice,
@@ -18,7 +19,8 @@ class Cardlist extends React.Component {
               envScore
             }
           }`;
-        return (<Query query={CAT_QUERY}>
+        return (
+        <Query query={SEARCH_QUERY}>
             {({ loading, error, data }) => {
                 if (loading) return <div>Fetching</div>
                 if (error) return <div>Error</div>
@@ -27,7 +29,7 @@ class Cardlist extends React.Component {
 
                 return (
                     <div className="cardlist">
-                        {products.map(product => <Card product={product} />)}
+                        {products.map((product,index) => <Card key={index} product={product} />)}
                     </div>
                 )
             }}
@@ -36,4 +38,4 @@ class Cardlist extends React.Component {
     }
 }
 
-export default Cardlist;
+export default withRouter(SearchResult);

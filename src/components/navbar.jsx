@@ -11,9 +11,11 @@ class Navbar extends React.Component{
     render(){
         return(
             <nav className="navbar" >
-                <a  to='/' className="App-logo">Envofriendly</a>
-                <Searchbar />
-                <a  to='/shopping-cart' className="shopping-cart-icon"><FaUser className="user-icon"/></a>
+                <div className="nav-container">
+                <Link  to='/' className="App-logo">Envofriendly</Link>
+                <Searchbar search_f = {this.props.search_f}/>
+                </div>
+                <Link  to='/login' ><FaUser className="user-icon"/></Link>
         </nav>)
     }
 }

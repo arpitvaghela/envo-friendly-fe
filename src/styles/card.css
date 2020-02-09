@@ -3,7 +3,7 @@
     width:80%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -27,11 +27,17 @@
     max-height: 250px;
 }
 .card-title{
+
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 250px;
     font-size: 125%;
     color:#323232;
-    padding:0;
+    padding:1em;
     margin:0;
     text-align: center;
+    overflow-wrap: break-word;
+
 }
 .card-content{
     padding-top: 1em;

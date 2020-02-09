@@ -19,3 +19,17 @@
 .sidebar .bar-icon{
     padding: 20px;
 }
+.link-menu-items:hover{
+    text-decoration: underline;
+    
+}
+@media screen and (max-width:1000px){
+    .sidebar{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        width:20px;
+        color:green
+    }
+}

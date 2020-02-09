@@ -19,22 +19,34 @@
     font-size: 200%;
 }
 .popup-inner{
+    padding: 1em;
+    width:80%;
     background-color: #ffffff;
     border-radius: 20px;
-    display: flex;    
+    display: inline-flex;    
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
 }
-.pop-inner .content{
-    display: flex;
+.pop-inner .popup-content{
+    display: inline-block;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
 }
 .pop-inner .content img{
     width:50%;   
 }
-
+.popup-inner .popup-container{
+    width:50%;
+    display: inline-block;
+}
 .pop-inner .content .container{
-    display: inline-block !important; 
+     
+}
+.e-friendly{
+    display: inline-block;
 }
 .popup-text{
     color:#292929;
